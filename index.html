@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DONIA SMART SCHOOL — المدرسة الذكية</title>
+<meta name="description" content="نظام تسيير مدرسي ذكي بالعربية الكاملة، لمؤسسات التربية الوطنية الجزائرية — إدارة، غياب، حضور، تتبع مواقع، جدولة، تواصل مع الأولياء، وطباعة رسمية في نظام واحد.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background:
+      radial-gradient(1000px 600px at 15% 0%, rgba(78,161,212,.10), transparent 55%),
+      radial-gradient(900px 500px at 100% 25%, rgba(212,162,78,.08), transparent 55%),
+      linear-gradient(180deg, #0a1630 0%, #0e1c3d 45%, #0a1630 100%);
+    color: #ecebe7;
+    direction: rtl;
+    line-height: 1.75;
+  }
+  a { color: inherit; }
+  img { max-width:100%; display:block; }
+  .section { padding: 90px 32px; }
+  .inner { max-width: 1180px; margin: 0 auto; }
+  .eyebrow {
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; font-weight: 700; letter-spacing: .04em;
+    color: #d4a24e; background: rgba(212,162,78,.1);
+    border: 1px solid rgba(212,162,78,.28);
+    padding: 6px 16px; border-radius: 999px;
+  }
+  .eyebrow.danger { color:#e2a3a3; background:rgba(226,80,80,.1); border-color:rgba(226,80,80,.28); }
+  h1 { font-size: 48px; font-weight: 900; line-height: 1.28; margin: 22px 0 18px; color: #fbf9f5; }
+  h2 { font-size: 32px; font-weight: 800; margin: 0 0 14px; color: #fbf9f5; }
+  .lede { font-size: 18.5px; color: #b7b3aa; max-width: 680px; margin: 0 0 34px; }
+  .center { text-align: center; margin-inline: auto; }
+  .btn-primary {
+    display:inline-flex; align-items:center; gap:10px;
+    background: #d4a24e; color: #191307; font-weight: 800; font-size: 17px;
+    padding: 16px 34px; border-radius: 12px; text-decoration:none;
+    box-shadow: 0 14px 34px -12px rgba(212,162,78,.55);
+  }
+  .btn-secondary {
+    display:inline-flex; align-items:center; gap:10px;
+    background: transparent; color: #ecebe7; font-weight: 700; font-size: 16px;
+    padding: 15px 30px; border-radius: 12px; text-decoration:none;
+    border: 1px solid rgba(236,235,231,.22);
+  }
+  .card {
+    background: #101c38; border: 1px solid #1f3260; border-radius: 18px;
+    padding: 26px; height: 100%;
+  }
+  .icon-badge {
+    width: 44px; height: 44px; border-radius: 12px;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom: 16px; flex-shrink:0;
+  }
+  .icon-badge.pain { background: rgba(226,80,80,.1); border: 1px solid rgba(226,80,80,.28); color:#e2a3a3; }
+  .icon-badge.gain { background: rgba(212,162,78,.12); border: 1px solid rgba(212,162,78,.3); color:#d4a24e; }
+  /* لمسة ألوان متنوعة وجذابة على بطاقات الميزات (تدور كل 5 بطاقات) */
+  .grid3 .card:nth-child(1) .icon-badge.gain, .grid3 .card:nth-child(6) .icon-badge.gain { background: rgba(212,162,78,.14); border-color: rgba(212,162,78,.34); color:#e6ba63; }
+  .grid3 .card:nth-child(2) .icon-badge.gain, .grid3 .card:nth-child(7) .icon-badge.gain { background: rgba(90,170,224,.14); border-color: rgba(90,170,224,.34); color:#7ec3ef; }
+  .grid3 .card:nth-child(3) .icon-badge.gain, .grid3 .card:nth-child(8) .icon-badge.gain { background: rgba(88,206,150,.14); border-color: rgba(88,206,150,.34); color:#7fdcae; }
+  .grid3 .card:nth-child(4) .icon-badge.gain, .grid3 .card:nth-child(9) .icon-badge.gain { background: rgba(172,134,240,.14); border-color: rgba(172,134,240,.34); color:#c2a3f5; }
+  .grid3 .card:nth-child(5) .icon-badge.gain { background: rgba(230,130,150,.14); border-color: rgba(230,130,150,.34); color:#f0a9bb; }
+  .card h3 { font-size: 17.5px; font-weight: 800; color: #fbf9f5; margin: 0 0 10px; }
+  .card p { font-size: 14.5px; color: #a9a59c; margin: 0; }
+  .badge-row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .pill {
+    display:flex; align-items:center; gap:8px;
+    background: #101c38; border: 1px solid #1f3260; border-radius: 999px;
+    padding: 10px 20px; font-size: 13.5px; color: #cfcbc1; font-weight:600;
+  }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .grid2 { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; }
+  footer { border-top:1px solid #1f3260; padding: 40px 32px; text-align:center; color:#6f6c64; font-size:13px; }
+  @media (max-width: 900px) {
+    h1 { font-size: 33px; }
+    .grid3 { grid-template-columns:1fr; }
+    .grid4 { grid-template-columns:repeat(2,1fr); }
+    .grid2 { grid-template-columns:1fr; }
+    .section { padding: 60px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div style="width:100%; border-bottom:1px solid #1f3260; position:sticky; top:0; z-index:50; background:rgba(8,16,36,.86); backdrop-filter:blur(10px);">
+  <div style="max-width:1180px; margin:0 auto; padding:14px 32px; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="logo.jpg" alt="DONIA LABS TECH" style="width:42px; height:42px; border-radius:50%;">
+      <span style="font-weight:800; font-size:16px; color:#fbf9f5;">DONIA SMART SCHOOL</span>
+    </div>
+    <a href="https://dss-license-server.onrender.com/" target="_blank" rel="noopener" class="btn-primary" style="padding:11px 22px; font-size:14px;">افتح النظام</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="section" style="padding-top:70px; padding-bottom:50px; background: radial-gradient(1100px 500px at 50% -10%, rgba(212,162,78,.16), transparent 60%);">
+  <div class="inner grid2">
+    <div>
+      <span class="eyebrow">من تطوير DONIA LABS TECH — مختبر الأفكار الذكية</span>
+      <h1>كل مؤسسة تُدار بالورق،<br>تخسر وقتاً لن يعود.</h1>
+      <p class="lede">ملفات ضائعة، غياب يُكتشف متأخراً، أولياء لا يعلمون أين أبناؤهم، وموظف واحد يمكنه أن يطّلع على ما لا يخصّه — كل هذا يتوقف مع DONIA SMART SCHOOL: نظام واحد يمنح كل موظف بوابته الخاصة، ويمنح مديرك رؤية كاملة ومتحكَّم فيها للمؤسسة، لحظة بلحظة.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:40px;">
+        <a href="https://dss-license-server.onrender.com/" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#191307" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+          حمّل النظام وجرّبه الآن
+        </a>
+        <a href="https://dss-license-server.onrender.com/" target="_blank" rel="noopener" class="btn-secondary">اطلب ترخيصاً لمؤسستك</a>
+      </div>
+      <div class="grid4" style="max-width:520px;">
+        <div class="pill" style="justify-content:center; flex-direction:column; padding:16px 6px;">
+          <div style="font-size:22px; font-weight:900; color:#d4a24e;">961</div>
+          <div style="font-size:11.5px; color:#8b8779;">تلميذاً</div>
+        </div>
+        <div class="pill" style="justify-content:center; flex-direction:column; padding:16px 6px;">
+          <div style="font-size:22px; font-weight:900; color:#d4a24e;">88</div>
+          <div style="font-size:11.5px; color:#8b8779;">موظفاً</div>
+        </div>
+        <div class="pill" style="justify-content:center; flex-direction:column; padding:16px 6px;">
+          <div style="font-size:22px; font-weight:900; color:#d4a24e;">24×10</div>
+          <div style="font-size:11.5px; color:#8b8779;">بوابة صلاحيات</div>
+        </div>
+        <div class="pill" style="justify-content:center; flex-direction:column; padding:16px 6px;">
+          <div style="font-size:22px; font-weight:900; color:#d4a24e;">12</div>
+          <div style="font-size:11.5px; color:#8b8779;">وثيقة رسمية</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="hero-visual.jpg" alt="DONIA SMART SCHOOL" style="border-radius:22px; border:1px solid #2b2416; box-shadow:0 30px 70px -30px rgba(0,0,0,.6);">
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="section" style="padding-top:10px; padding-bottom:20px;">
+  <div class="inner">
+    <div class="center" style="max-width:680px; margin-bottom:44px;">
+      <span class="eyebrow danger">الوضع الحالي في أغلب المؤسسات</span>
+      <h2 style="margin-top:18px;">مشاكل تتكرر كل يوم دراسي، وتظنّها "طبيعة العمل"</h2>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg></div>
+        <h3>وقت ضائع في التقارير</h3>
+        <p>أيام كاملة تُصرَف لإعداد وثائق رسمية يدوياً في كل مطلع سنة أو نهاية فصل، بدل التركيز على التلاميذ.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.7 17a1.8 1.8 0 0 0 1.5 2.7h15.6a1.8 1.8 0 0 0 1.5-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg></div>
+        <h3>غياب يُكتشف متأخراً</h3>
+        <p>الأولياء يعلمون بغياب ابنهم بعد أيام، وأحياناً بعد فوات المهلة القانونية للتبليغ — مسؤولية قد تقع على المؤسسة.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v3"/><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></div>
+        <h3>صلاحيات غير محكومة</h3>
+        <p>أي موظف بحساب واحد يرى كل شيء، وبلا سجل يوثّق من عدّل ماذا — خطر حقيقي على بيانات التلاميذ الحساسة.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="7.5" r="2.8"/><path d="M4.2 19.5c.5-3.4 2.6-5.2 5.3-5.2s4.6 1.6 5.2 4.6"/><path d="M18 8v6M15 11h6"/></svg></div>
+        <h3>ولي أمر في الظلام</h3>
+        <p>لا وسيلة سهلة تُبقي الأولياء على اطلاع بنتائج ابنهم أو غيابه أو حتى مكانه داخل المؤسسة، فتضعف الثقة والتواصل.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m9 10 3 3 3-6"/></svg></div>
+        <h3>جداول تتعارض باستمرار</h3>
+        <p>إعداد استعمال الزمن يدوياً يعني تعارضات تُكتشف بعد التوزيع، وإعادة عمل مضنية كل فصل دراسي.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge pain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 21 1.4-4.3L16 4.6a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L7.3 20 2.5 21Z"/></svg></div>
+        <h3>برامج مقرصنة بلا حماية</h3>
+        <p>برامج تسيير مجانية أو منسوخة بلا ترخيص حقيقي، تتوقف فجأة أو تُفقد بياناتها بلا أي دعم فني.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTION TRANSITION ===== -->
+<section class="section" style="padding-top:10px; padding-bottom:10px;">
+  <div class="inner center" style="max-width:620px;">
+    <span class="eyebrow">الحل</span>
+    <h2 style="margin-top:18px;">DONIA SMART SCHOOL يُغلق هذه الثغرات كلها، في نظام واحد</h2>
+    <p class="lede center">قدرات حقيقية، مبنية ومُختبرة على مدرسة تعمل بها فعلياً — لا وعود، بل نظام يُستعمل يومياً.</p>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section" style="padding-top:20px;">
+  <div class="inner">
+    <div class="grid3">
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4.5 3 7.7 7 9 4-1.3 7-4.5 7-9V6Z"/><path d="M9.5 12.3 11.3 14l3.2-3.7"/></svg></div>
+        <h3>24 بوابة إلكترونية × 10 أدوار</h3>
+        <p>كل موظف له بوابة صلاحيات خاصة به (مدير، ناظر، مستشار، أستاذ، إداري...)، والمدير وحده يمنح أو يسحب كل صلاحية — مع سجل تدقيق كامل يوثّق من فعل ماذا ومتى.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 8.5a6.5 6.5 0 1 0-11.9 3.6L4 19l4.6-1.4a6.5 6.5 0 0 0 9.9-9.1Z"/><path d="M12 8v4l2.5 1.5"/></svg></div>
+        <h3>إشعار الأولياء لحظة الغياب</h3>
+        <p>بريد إلكتروني وواتساب يصلان فور تسجيل الغياب — لا مهلة قانونية تُفوَّت، ولا ولي أمر يُفاجَأ بعد أسبوع.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2.2"/><path d="M2.5 10.2h19"/><path d="M6 14.5h4"/></svg></div>
+        <h3>حضور بالبطاقة أو البصمة</h3>
+        <p>مسح لحظي عند الدخول، تصنيف تلقائي حاضر/متأخر، وربط فوري بسجل الغياب دون أي إدخال يدوي.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.5a6.5 6.5 0 1 0-13 0c0 4.2 3 7.5 6.5 11 3.5-3.5 6.5-6.8 6.5-11Z"/><circle cx="11.5" cy="8.5" r="2.2"/></svg></div>
+        <h3>تتبّع مواقع التلاميذ داخل المؤسسة</h3>
+        <p>نقاط تفتيش ذكية (البوابة، الحافلة، القاعة...) تسجّل آخر موقع معروف للتلميذ فور مسح بطاقته، على خريطة حيّة يطّلع عليها ولي الأمر عبر بوابته الخاصة — أول نظام مدرسي جزائري بهذه التقنية.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 4v5M13 4v5M18 4v5"/><path d="m9 14 1.6 1.6L14 12"/></svg></div>
+        <h3>محرك جدولة وحصص رقمية</h3>
+        <p>استعمال زمن كامل رقمياً، بفحص تلقائي لتعارضات القسم والأستاذ والقاعة، وطباعة فورية لكل جدول حصص جاهزة للتعليق.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M15 3v4h4"/><path d="M8 12h7M8 15.5h7M8 18.5h4"/></svg></div>
+        <h3>التقرير العام للتسيير بضغطة واحدة</h3>
+        <p>اثنتا عشرة وثيقة رسمية مطابقة للمنشور 177/93 تُصدَر دفعة واحدة — عمل كان يستغرق أياماً، يصبح ثوانٍ.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="7.5" r="2.8"/><circle cx="17" cy="9" r="2"/><path d="M4.2 19.5c.5-3.4 2.6-5.2 5.3-5.2s4.6 1.6 5.2 4.6"/><path d="M15.6 15.8c1.8.2 3 1.7 3.4 3.9"/></svg></div>
+        <h3>بوابة أولياء ذاتية التسجيل</h3>
+        <p>الولي يسجّل نفسه عبر رابط خاص بالمؤسسة، وبعد التفعيل الإداري يتابع النتائج والغياب والموقع، لحظياً.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 4.9 5.2.3-4 3.4 1.4 5.1L12 13.9 7.6 16.7 9 11.6l-4-3.4 5.2-.3Z"/></svg></div>
+        <h3>مساعد ذكاء اصطناعي</h3>
+        <p>وثيقة إدارية غير مبرمجة مسبقاً؟ المساعد الذكي يولّدها اعتماداً على نماذج مُتعلَّمة من وثائق المؤسسة نفسها.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-badge gain"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+        <h3>توقيع رقمي وتفعيل عبر الإنترنت</h3>
+        <p>ترخيص كل مؤسسة موقّع رقمياً (Ed25519) بلا إمكانية تزوير — تفعيل مرة واحدة فقط عبر الإنترنت، ثم يعمل النظام محلياً بلا حاجة لأي اتصال أو تثبيت متكرر بعدها.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPLIANCE STRIP ===== -->
+<section class="section" style="padding-top:10px; padding-bottom:30px;">
+  <div class="inner">
+    <div class="badge-row">
+      <div class="pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e6ba63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        مطابق للقرار الوزاري 833 بشأن الغياب
+      </div>
+      <div class="pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7ec3ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        مطابق للمنشور الوزاري 177/93
+      </div>
+      <div class="pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7fdcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        مُختبر فعلياً على 961 تلميذاً و88 موظفاً
+      </div>
+      <div class="pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c2a3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        واجهة عربية كاملة من اليمين لليسار
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA (urgency) ===== -->
+<section class="section">
+  <div class="inner" style="background:linear-gradient(135deg,#1a1508,#0e1c3d 55%,#101c38); border:1px solid rgba(212,162,78,.3); border-radius:26px; padding:60px 40px; text-align:center;">
+    <span class="eyebrow">مرحلة الإطلاق المبكر</span>
+    <h2 style="margin-top:18px; margin-bottom:16px;">كن من أوائل المؤسسات المرخَّصة رسمياً</h2>
+    <p class="lede center" style="margin-bottom:36px;">كل يوم تُدار فيه مؤسستك بالطريقة القديمة هو وقت وثقة لن يعودا. حمّل النظام الآن، أو أرسل طلب ترخيص وسنتواصل معك خلال وقت قصير لإتمام التفعيل.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://dss-license-server.onrender.com/" target="_blank" rel="noopener" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#191307" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+        تحميل النظام + طلب الترخيص
+      </a>
+    </div>
+    <p style="margin-top:22px; font-size:13px; color:#8b8779;">التحميل ونموذج طلب الترخيص متاحان معاً على نفس الرابط أعلاه.</p>
+  </div>
+</section>
+
+<footer>
+  <img src="logo.jpg" alt="DONIA LABS TECH" style="width:40px; height:40px; border-radius:50%; margin:0 auto 12px;">
+  DONIA LABS TECH © 2026 — جميع الحقوق محفوظة · DONIA SMART SCHOOL
+</footer>
+
+</body>
+</html>
