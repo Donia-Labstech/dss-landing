@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[تجريبي] DONIA SMART SCHOOL v3 — build 20260610</title>
+<title>DSS DEMO — DONIA SMART SCHOOL</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
@@ -1170,7 +1170,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
       <!-- SCHEDULE (استعمال الزمن) -->
       <div class="page" id="p-sched">
         <div class="card" style="margin-bottom:1rem">
-          <div class="ch"><span class="ch-t">📥 استيراد استعمال الزمن من Excel (OSCTIME / FET) — الجولة 17</span></div>
+          <div class="ch"><span class="ch-t">📥 استيراد استعمال الزمن من Excel (OSCTIME / FET)</span></div>
           <div style="padding:1rem;display:flex;gap:10px;flex-wrap:wrap;align-items:end">
             <div style="color:var(--m);font-size:.85rem;flex:1;min-width:240px">يدعم تصدير aSc Timetables (xlsx) وشبكة مواقيت الأساتذة. تُنشأ الأقسام والمواد والمحلات الناقصة تلقائياً، ويُطابَق الأساتذة بالاسم مع إمكانية التعديل قبل التأكيد.</div>
             <input type="file" id="tt-file" accept=".xlsx" class="ig" style="max-width:260px">
@@ -1844,7 +1844,7 @@ async function loadSchoolPublic(){
     const col=d.brand_color||'#1B7F4B';
     document.getElementById('landing').style.setProperty('--brand',col);
     const nm=d.name_ar||'المنصة التربوية الرقمية';
-    document.title=(d.name_ar?d.name_ar+' — ':'')+'DONIA SMART SCHOOL';
+    document.title='DSS DEMO — DONIA SMART SCHOOL';
     const meta=[d.level_type&&d.level_type+'',d.commune||d.wilaya].filter(Boolean).join(' · ');
     const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
     set('ld-name-s',nm);set('ld-sub-s',(d.wilaya?'ولاية '+d.wilaya+' · ':'')+'المنصة التربوية الرقمية');
