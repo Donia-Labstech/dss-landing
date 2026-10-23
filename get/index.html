@@ -45,13 +45,15 @@ input:focus,textarea:focus{outline:0;border-color:#d4a24e}
 
   <div class="card">
     <h2><span class="step">1</span> تحميل النظام الكامل</h2>
-    <p style="margin:6px 0 14px;color:#b7b3aa">الحزمة الكاملة لنظام ويندوز: واجهة عربية كاملة، بوابات الأساتذة والمشرفين والمدير، التقرير العام للتسيير، وغيرها.</p>
+    <p style="margin:6px 0 14px;color:#b7b3aa">الحزمة الكاملة لنظام ويندوز: واجهة عربية كاملة، الحضور والغياب ببطاقة RFID أو QR، التقرير اليومي لمستشار التربية، بوابات الأساتذة والمشرفين والأولياء، التقرير العام للتسيير، ودليل استخدام ومساعد مدمج.</p>
     <a class="btn" id="dl" href="DSS_SCHOOL_FULL.zip" download>⬇ تحميل DONIA SMART SCHOOL</a>
-    <div class="meta">الإصدار: 3.0 · ملف مضغوط (ZIP) · يتطلب Windows 10 أو أحدث</div>
+    <div class="meta">الإصدار: 3.0 (تحديث 23 أكتوبر 2026) · ملف مضغوط (ZIP) · يتطلب Windows 10 أو أحدث</div>
     <ol>
       <li>فكّ الضغط عن الملف في مجلد، مثلاً <code>D:\DSS_SCHOOL</code> (انقر يميناً ← Extract All).</li>
       <li>انقر مرتين على <code>start.bat</code> (ثبّت Python 3.11 أو أحدث إن لم يكن موجوداً — مع تفعيل Add to PATH).</li>
-      <li>يفتح النظام في المتصفح على <code>http://127.0.0.1:8000</code>.</li>
+      <li>يفتح النظام في المتصفح على <code>http://127.0.0.1:8000</code>. شغّل <code>Create_Desktop_Shortcut.bat</code> مرة واحدة لإنشاء اختصار على سطح المكتب.</li>
+      <li>للهاتف: من «إعدادات المؤسسة» امسح رمز QR بهاتف على نفس شبكة الواي فاي (الحاسوب يبقى شغّالاً).</li>
+      <li>راجع <a href="../guide/" style="color:#d4a24e">دليل الاستخدام</a> للتفاصيل خطوة بخطوة.</li>
     </ol>
   </div>
 
@@ -78,8 +80,9 @@ input:focus,textarea:focus{outline:0;border-color:#d4a24e}
     </form>
     <div id="out"></div>
     <div class="note" id="note" style="display:none"></div>
+    <p class="meta">بإرسال الطلب تقبل <a href="../terms/" style="color:#d4a24e">شروط الاستخدام</a> وتطّلع على <a href="../privacy/" style="color:#d4a24e">سياسة الخصوصية</a>. لا يُحفظ شيء على هذا الموقع؛ يُجهَّز النص لتُرسله أنت.</p>
   </div>
-  <div class="meta" style="text-align:center">DONIA LABS TECH © 2026 · <a href="https://donialabstech.online" target="_blank" rel="noopener" style="color:#d4a24e">donialabstech.online</a></div>
+  <div class="meta" style="text-align:center"><a href="../guide/" style="color:#d4a24e">دليل الاستخدام</a> · <a href="../terms/" style="color:#d4a24e">شروط الاستخدام</a> · <a href="../privacy/" style="color:#d4a24e">سياسة الخصوصية</a><br>DONIA LABS TECH © 2026 · <a href="https://donialabstech.online" target="_blank" rel="noopener" style="color:#d4a24e">donialabstech.online</a></div>
 </div>
 <script>
 /* ═══ إعدادات التواصل — عدّل هاتين القيمتين فقط ═══ */
