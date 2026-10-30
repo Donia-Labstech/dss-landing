@@ -46,15 +46,27 @@ input:focus,textarea:focus{outline:0;border-color:#d4a24e}
   <div class="card">
     <h2><span class="step">1</span> تحميل النظام الكامل</h2>
     <p style="margin:6px 0 14px;color:#b7b3aa">الحزمة الكاملة لنظام ويندوز: واجهة عربية كاملة، الحضور والغياب ببطاقة RFID أو QR، التقرير اليومي لمستشار التربية، بوابات الأساتذة والمشرفين والأولياء، التقرير العام للتسيير، ودليل استخدام ومساعد مدمج.</p>
-    <a class="btn" id="dl" href="DSS_SCHOOL_FULL.zip" download>⬇ تحميل DONIA SMART SCHOOL</a>
-    <div class="meta">الإصدار: 3.0 (تحديث 23 أكتوبر 2026) · ملف مضغوط (ZIP) · يتطلب Windows 10 أو أحدث</div>
+    <a class="btn" id="dl" href="DSS_Setup.exe" download>⬇ تحميل ملف التثبيت (DSS_Setup.exe)</a>
+    <div class="meta">الإصدار: 3.0 (تحديث 27 أكتوبر 2026) · نحو 19 م.ب · Windows 10/11 (64 بت) · لا يحتاج Python ولا إنترنت</div>
     <ol>
-      <li>فكّ الضغط عن الملف في مجلد، مثلاً <code>D:\DSS_SCHOOL</code> (انقر يميناً ← Extract All).</li>
-      <li>انقر مرتين على <code>start.bat</code> (ثبّت Python 3.11 أو أحدث إن لم يكن موجوداً — مع تفعيل Add to PATH).</li>
+      <li>شغّل <code>DSS_Setup.exe</code> ← «التالي» ← انتظر لحظات. سيُنشئ اختصاراً «DONIA SMART SCHOOL» على سطح المكتب. لا يحتاج صلاحيات المسؤول.</li>
+      <li>إن ظهر تحذير أزرق من ويندوز (SmartScreen) لأن الملف غير موقَّع رقمياً بعد: انقر <b>«More info»</b> ثم <b>«Run anyway»</b>. وإن حذفه مضاد الفيروسات فاستثنِ الملف.</li>
+      <li>انقر على الاختصار: يفتح النظام في نافذة خاصة (يعمل الخادم في الخلفية). ادخل بـ <code>admin</code> / <code>Donia@2026</code> ثم غيّر كلمة المرور فوراً.</li>
+      <li>للتحديث لاحقاً: شغّل ملف التثبيت الجديد فوق القديم؛ بياناتك وترخيصك لا تُمسّ. لإيقاف الخادم: قائمة ابدأ ← DONIA SMART SCHOOL ← «Stop the server».</li>
+      <li>للهاتف: من «إعدادات المؤسسة» امسح رمز QR بهاتف على نفس شبكة الواي فاي (الحاسوب يبقى شغّالاً).</li>
+      <li>راجع <a href="../guide/" style="color:#d4a24e">دليل الاستخدام</a> للتفاصيل خطوة بخطوة.</li>
+    </ol>
+    <details style="margin-top:14px"><summary style="cursor:pointer;color:#d4a24e">طريقة بديلة: الحزمة المضغوطة (تحتاج Python)</summary>
+    <p style="margin:10px 0"><a class="btn sec" href="DSS_SCHOOL_FULL.zip" download>⬇ DSS_SCHOOL_FULL.zip</a></p>
+<ol>
+      <li>فكّ الضغط عن الملف في مجلد عادي، مثلاً <code>C:\DSS_SCHOOL</code> (انقر يميناً ← Extract All) — لا تشغّله من داخل ملف ZIP مباشرة.</li>
+      <li>انقر مرتين على <code>start.bat</code>. يحتاج Python 3.9 أو أحدث (يُفضَّل 3.12 من <b>python.org</b> وليس من متجر Microsoft) مع تفعيل <code>Add python.exe to PATH</code> أثناء التثبيت. الإنترنت مطلوب في أول تشغيل فقط لتنزيل المكتبات.</li>
+      <li>إن ظهر خطأ أثناء التجهيز فأرسل لنا الملف <code>setup.log</code> الذي يظهر بجانب <code>start.bat</code>.</li>
       <li>يفتح النظام في المتصفح على <code>http://127.0.0.1:8000</code>. شغّل <code>Create_Desktop_Shortcut.bat</code> مرة واحدة لإنشاء اختصار على سطح المكتب.</li>
       <li>للهاتف: من «إعدادات المؤسسة» امسح رمز QR بهاتف على نفس شبكة الواي فاي (الحاسوب يبقى شغّالاً).</li>
       <li>راجع <a href="../guide/" style="color:#d4a24e">دليل الاستخدام</a> للتفاصيل خطوة بخطوة.</li>
     </ol>
+    </details>
   </div>
 
   <div class="card">
