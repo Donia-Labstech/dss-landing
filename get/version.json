@@ -1,0 +1,9 @@
+{
+ "version": "2026.11.02.1",
+ "url": "DSS_UPDATE.zip",
+ "sha256": "bf7c96714b0cd4697ca5e6586e0aecd448eba21a09e24b0e944d54dd3d5a8c83",
+ "sig": "6/PZ4lwbGtdOE4FuX8+/+BKNnGRp3uBmkmdNDBb6eAq168jwxKAunQfE9q/0A4HV4OTac3woj6GEQ+7MI5giBQ==",
+ "min_runtime": 1,
+ "notes": "التحديث الأول: الوصول عبر الإنترنت والتحديث التلقائي",
+ "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
+}
