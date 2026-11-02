@@ -1,9 +1,9 @@
 {
- "version": "2026.11.02.1",
+ "version": "2026.11.02.2",
  "url": "DSS_UPDATE.zip",
- "sha256": "bf7c96714b0cd4697ca5e6586e0aecd448eba21a09e24b0e944d54dd3d5a8c83",
- "sig": "6/PZ4lwbGtdOE4FuX8+/+BKNnGRp3uBmkmdNDBb6eAq168jwxKAunQfE9q/0A4HV4OTac3woj6GEQ+7MI5giBQ==",
+ "sha256": "abb7bc27399bcd4236c7a6e9324c47e541f4121ff7bbe6fe2333490cacb0fd27",
+ "sig": "fzccgwdl0IZrM753Z97mSbSPqb/K+vHt3+TW4swrKUVRLmiKxQnW7DvHY1NHQu9Yvz++mfiZMKHyGUsE0WfnAg==",
  "min_runtime": 1,
- "notes": "التحديث الأول: الوصول عبر الإنترنت والتحديث التلقائي",
+ "notes": "النوادي والمطعم والمكتبة وبطاقاتها + بوابة الاشتراك",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
