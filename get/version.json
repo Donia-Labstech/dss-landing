@@ -1,9 +1,9 @@
 {
- "version": "2026.11.04.1",
+ "version": "2026.11.04.2",
  "url": "DSS_UPDATE.zip",
- "sha256": "4e72c5501fafc6a1e929ad74772724f6de897fa655aa2bc679d4ae7d2a6cf2e2",
- "sig": "WkSq6y6mF5IRIDKiqFqOb1LLgvFbAHYXC8+13M56oFHMgvXs4G8wYsU5uxIQvCGjVjdy4eIVfe5CqS1d8bf9CQ==",
+ "sha256": "12db082aa11b3a4afdc7f018029fb4d2d271ede04181340b8400e73c9af22407",
+ "sig": "/ycDWg5b0PoyT6UfAaeaKAvj95aTOVti8nGycRev/Af4nGONGLE9d5EUeww/IKffstehY9eEeZFy27C+nhL7AA==",
  "min_runtime": 1,
- "notes": "الحسابات التلقائية (اسم مستخدم وكلمة مرور) مع بطاقات دخول، صور التلاميذ والمستخدمين بالكاميرا أو من ملف، الوثائق الإدارية A4 مع طباعة A5×2، وتغيير كلمة المرور عند أول دخول",
+ "notes": "تحديث الدليل: الرابط الثابت تفتحه DONIA LABS TECH",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
