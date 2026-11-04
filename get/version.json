@@ -1,9 +1,9 @@
 {
- "version": "2026.11.02.2",
+ "version": "2026.11.03.1",
  "url": "DSS_UPDATE.zip",
- "sha256": "abb7bc27399bcd4236c7a6e9324c47e541f4121ff7bbe6fe2333490cacb0fd27",
- "sig": "fzccgwdl0IZrM753Z97mSbSPqb/K+vHt3+TW4swrKUVRLmiKxQnW7DvHY1NHQu9Yvz++mfiZMKHyGUsE0WfnAg==",
+ "sha256": "05f93c9f9a1750b9dbad7827618260a372d9802b3b17361e76da799e1f600afa",
+ "sig": "zYRvAGjcDQbgWLddunjRQJ3FAn5JIWJ1EcCM0lyCiPhxNE4bm0izyvbvm3fBUKwJK621HJv5JXmftuwCQOrlCg==",
  "min_runtime": 1,
- "notes": "النوادي والمطعم والمكتبة وبطاقاتها + بوابة الاشتراك",
+ "notes": "النظام الداخلي الموحد بدل القرار 833 · بطاقات رسمية (دمغة + رقم التسجيل + QR) · الإحصاء الشامل · قواعد المواظبة قابلة للتعديل",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
