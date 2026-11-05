@@ -1,9 +1,9 @@
 {
- "version": "2026.11.06.1",
+ "version": "2026.11.07.2",
  "url": "DSS_UPDATE.zip",
- "sha256": "be7ebb3d7c4a104dd0ad35055fc53c366282ec122b1603f2317e0f8ffcee7583",
- "sig": "P0S4CUmaup1jYxSzAgwC+EAXy2b3e0Ckay/CLbkOndWyzZAZWA4ifylzccaViTl1YkUGgao/OQWqNnesVoHECg==",
+ "sha256": "558a4946fbc8a6af5c4acd27787e25b7fd1949565c41a6bc1f63b5a55810acab",
+ "sig": "69r1aCpC+LDj9X0LnEdDFzyY+Orl7hQ1Uu4lZFMw77/p8n0AUjXFwzsra85IX7pF+pMzpRujW1cSr+3xw839Dg==",
  "min_runtime": 1,
- "notes": "المساعد الذكي برصيد عبر بوابة DONIA: شريط الرصيد وزر الشحن",
+ "notes": "الجولة 29: الوكيل الإداري الذكي بالتفويض والتأكيد وسجل الأفعال",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
