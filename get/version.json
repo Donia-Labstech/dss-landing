@@ -1,9 +1,9 @@
 {
- "version": "2026.11.07.3",
+ "version": "2026.11.07.4",
  "url": "DSS_UPDATE.zip",
- "sha256": "87fb2aaed73d8cdcf04e4947afe0cafc595d3156e18dc5cf5710b577962bc6fc",
- "sig": "wfC1+w9LBuDl0sl3Z8MDCCm0uDJ00NQndNUcqqedLw9+OwqmzhkvmViYONJaqV7sALJ5la0kX1r8nQrD2u/gDQ==",
+ "sha256": "374028fd11e993afac3876b2ec045f0fca5e087053fd29d622d508836d891aa6",
+ "sig": "HRsIKrDwYB0rOreRtOapCJ3In5DFDwekP+bOClRQvE1p2yZTq5Fg+vRhM+z4jfshGy0QEeEVz5zw6Nqh08+SDA==",
  "min_runtime": 1,
- "notes": "الجولة 30: إصلاح الأقسام المكررة، استيراد المعيدين، الشهادة المدرسية الجديدة، مساعد واحد، وثائق أجمل",
+ "notes": "نسخة العرض التجريبية بالإصدار الفعلي؛ إصلاح اسم المؤسسة والسنة الدراسية في لوحة القيادة",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
