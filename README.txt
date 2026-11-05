@@ -7,3 +7,4 @@
 - privacy/index.html    سياسة الخصوصية (جديد)
 - terms/index.html      شروط الاستخدام (جديد)
 - hero-visual.jpg, logo.jpg, tracking-map.png
+
