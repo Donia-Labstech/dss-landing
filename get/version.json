@@ -1,9 +1,9 @@
 {
- "version": "2026.11.05.1",
+ "version": "2026.11.06.1",
  "url": "DSS_UPDATE.zip",
- "sha256": "d7abbc4c1b79d808eab43070eba99d9c1c9b08d68b82dc7ab401e182f7feb81a",
- "sig": "u3Qm9TbKv69dLGqAeuhdWCDAG9VRSktVp8lCfAwALJcrFpmkZhu6AEmkYfVhuBMia08WPqEnsULNoXnHi0q5Ag==",
+ "sha256": "be7ebb3d7c4a104dd0ad35055fc53c366282ec122b1603f2317e0f8ffcee7583",
+ "sig": "P0S4CUmaup1jYxSzAgwC+EAXy2b3e0Ckay/CLbkOndWyzZAZWA4ifylzccaViTl1YkUGgao/OQWqNnesVoHECg==",
  "min_runtime": 1,
- "notes": "بوابة البريد عبر جوجل شيت مجاناً، البريد إلزامي لحسابات الأولياء، والدعم عن بعد بطلب المدير",
+ "notes": "المساعد الذكي برصيد عبر بوابة DONIA: شريط الرصيد وزر الشحن",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
