@@ -1,9 +1,9 @@
 {
- "version": "2026.11.07.2",
+ "version": "2026.11.07.3",
  "url": "DSS_UPDATE.zip",
- "sha256": "558a4946fbc8a6af5c4acd27787e25b7fd1949565c41a6bc1f63b5a55810acab",
- "sig": "69r1aCpC+LDj9X0LnEdDFzyY+Orl7hQ1Uu4lZFMw77/p8n0AUjXFwzsra85IX7pF+pMzpRujW1cSr+3xw839Dg==",
+ "sha256": "87fb2aaed73d8cdcf04e4947afe0cafc595d3156e18dc5cf5710b577962bc6fc",
+ "sig": "wfC1+w9LBuDl0sl3Z8MDCCm0uDJ00NQndNUcqqedLw9+OwqmzhkvmViYONJaqV7sALJ5la0kX1r8nQrD2u/gDQ==",
  "min_runtime": 1,
- "notes": "الجولة 29: الوكيل الإداري الذكي بالتفويض والتأكيد وسجل الأفعال",
+ "notes": "الجولة 30: إصلاح الأقسام المكررة، استيراد المعيدين، الشهادة المدرسية الجديدة، مساعد واحد، وثائق أجمل",
  "installer_url": "https://donia-labstech.github.io/dss-landing/get/"
 }
